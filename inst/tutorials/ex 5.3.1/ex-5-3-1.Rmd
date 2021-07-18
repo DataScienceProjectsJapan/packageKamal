@@ -1,0 +1,41 @@
+---
+title: "exercises for section 5.3.1"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Easy
+
+### question 1
+
+Sort flights to find the most delayed flights. hint(use desc( )).
+
+```{r two-plus-two, exercise=TRUE}
+
+```
+
+## Modrate 
+
+### question 2
+
+write the code to find the Flights that left the earliest.
+
+```{r two-plus-three, exercise=TRUE}
+
+```
+
+## Hard
+
+### question 3
+
+show top 10 flights that traveled the farthest and top 10 that traveled the shortest?
+
+```{r two-plus-four, exercise=TRUE}
+
+```
