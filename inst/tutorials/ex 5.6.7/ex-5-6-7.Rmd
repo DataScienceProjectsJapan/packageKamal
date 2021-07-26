@@ -6,7 +6,11 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(gradethis)
+tutorial_options(exercise.checker = gradethis::grade_learnr)
 knitr::opts_chunk$set(echo = FALSE)
+library(nycflights13)
+library(tidyverse)
 ```
 
 
@@ -26,21 +30,44 @@ question("which delay may prove costlier to customer?",
 ### question 2
 
 
-write the code to show Which carrier has the worst delays(arr_delay)? Hint: think about flights %>% group_by(carrier, dest) %>% summarise(n())
+write the code to show Which carrier has the worst delays(arr_delay)?
 
 ```{r two-plus-four, exercise=TRUE}
 
 ```
+```{r two-plus-four-hint-1}
+"flights %>% group_by(carrier, dest) %>% summarise(n())"
+```
+```{r two-plus-four-solution}
+flights %>%
+  group_by(carrier) %>%
+  summarise(arr_delay = mean(arr_delay, na.rm = TRUE)) %>%
+  arrange(desc(arr_delay))
+filter(airlines, carrier == "F9")
+```
+```{r two-plus-four-check}
+gradethis::grade_code()
+```
+
 
 
 ## hard
 
 ### question 3
 
-shows that the number of flights cancelled increases with the total number of flights
+What time of day should you fly if you want to avoid delays as much as possible?
  
  ```{r two-plus-five, exercise=TRUE}
 
+```
+```{r two-plus-five-solution}
+flights %>%
+  group_by(hour) %>%
+  summarise(arr_delay = mean(arr_delay, na.rm = TRUE)) %>%
+  arrange(arr_delay)
+```
+```{r two-plus-five-check}
+gradethis::grade_code()
 ```
  
  

@@ -6,7 +6,11 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(gradethis)
+tutorial_options(exercise.checker = gradethis::grade_learnr)
 knitr::opts_chunk$set(echo = FALSE)
+library(nycflights13)
+library(tidyverse)
 ```
 
 
@@ -14,11 +18,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### question 1
 
-Sort flights to find the most delayed flights. hint(use desc( )).
+Sort flights to find the most delayed flights. 
 
 ```{r two-plus-two, exercise=TRUE}
 
 ```
+```{r two-plus-two-hint-1}
+"use desc( ))"
+```
+```{r two-plus-two-solution}
+arrange(flights, desc(dep_delay))
+```
+```{r two-plus-two-check}
+gradethis::grade_code()
+```
+
 
 ## Modrate 
 
@@ -29,6 +43,16 @@ write the code to find the Flights that left the earliest.
 ```{r two-plus-three, exercise=TRUE}
 
 ```
+```{r two-plus-three-hint-1}
+"the code looks similiar to the answer of question 1"
+```
+```{r two-plus-three-solution}
+arrange(flights, dep_delay)
+```
+```{r two-plus-three-check}
+gradethis::grade_code()
+```
+
 
 ## Hard
 
@@ -38,4 +62,14 @@ show top 10 flights that traveled the farthest and top 10 that traveled the shor
 
 ```{r two-plus-four, exercise=TRUE}
 
+```
+```{r two-plus-four-hint-1}
+"The answer follows the same idea as the answer for number 1 and 2"
+```
+```{r two-plus-four-solution}
+arrange(flights, desc(distance))
+arrange(flights, distance)
+```
+```{r two-plus-four-check}
+gradethis::grade_code()
 ```
