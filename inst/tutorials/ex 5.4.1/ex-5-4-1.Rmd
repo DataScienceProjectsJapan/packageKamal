@@ -23,7 +23,8 @@ Use any_of () function to find dep_delay and dep_time vectors.
 ```{r two-plus-two, exercise=TRUE}
 
 ```
-```{r two-plu-two-hint-1}
+
+```{r two-plus-two-hint-1}
 "select(flights, any_of(c()))"
 ```
 
