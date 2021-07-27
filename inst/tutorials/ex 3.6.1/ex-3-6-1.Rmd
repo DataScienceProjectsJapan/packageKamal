@@ -12,10 +12,12 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 ```
 
+#Questions for ex 3.6.1
+
 ## Easy
 
 ### question 1
-```{r quiz}
+```{r quiz1a}
 question("which is geom?",
   answer("A geom is the geometrical object that a plot uses to represent data", correct = TRUE),
   answer("is a german car"),
