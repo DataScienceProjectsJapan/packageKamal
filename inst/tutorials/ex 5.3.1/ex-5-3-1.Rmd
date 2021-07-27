@@ -20,16 +20,16 @@ library(tidyverse)
 
 Sort flights to find the most delayed flights. 
 
-```{r two-plus-two, exercise=TRUE}
+```{r two-plus-1a, exercise=TRUE}
 
 ```
-```{r two-plus-two-hint-1}
+```{r two-plus-1a-hint-1}
 "use desc( ))"
 ```
-```{r two-plus-two-solution}
+```{r two-plus-1a-solution}
 arrange(flights, desc(dep_delay))
 ```
-```{r two-plus-two-check}
+```{r two-plus-1a-check}
 gradethis::grade_code()
 ```
 
@@ -40,16 +40,16 @@ gradethis::grade_code()
 
 write the code to find the Flights that left the earliest.
 
-```{r two-plus-three, exercise=TRUE}
+```{r two-plus-2a, exercise=TRUE}
 
 ```
-```{r two-plus-three-hint-1}
+```{r two-plus-2a-hint-1}
 "the code looks similiar to the answer of question 1"
 ```
-```{r two-plus-three-solution}
+```{r two-plus-2a-solution}
 arrange(flights, dep_delay)
 ```
-```{r two-plus-three-check}
+```{r two-plus-2a-check}
 gradethis::grade_code()
 ```
 
@@ -60,16 +60,16 @@ gradethis::grade_code()
 
 show top 10 flights that traveled the farthest and top 10 that traveled the shortest?
 
-```{r two-plus-four, exercise=TRUE}
+```{r two-plus-3a, exercise=TRUE}
 
 ```
-```{r two-plus-four-hint-1}
+```{r two-plus-3a-hint-1}
 "The answer follows the same idea as the answer for number 1 and 2"
 ```
-```{r two-plus-four-solution}
+```{r two-plus-3a-solution}
 arrange(flights, desc(distance))
 arrange(flights, distance)
 ```
-```{r two-plus-four-check}
+```{r two-plus-3a-check}
 gradethis::grade_code()
 ```

@@ -18,7 +18,7 @@ library(tidyverse)
 
 ### question 1
 
-```{r quiz}
+```{r quiz2b}
 question("what would the following code 1504 %/% 100 give",
   answer("[1] 15", correct = TRUE),
   answer("[1] 4"),
@@ -31,7 +31,7 @@ question("what would the following code 1504 %/% 100 give",
 
 ### question 2
 
-```{r quiz1}
+```{r quiz1c}
 question(" what does the following give us 1:3 + 1:10",
   answer("[1]  2  4  6  5  7  9  8 10 12 11", correct = TRUE),
   answer("[1]  2  4  6  5  7  9  9 10 12 11"),
@@ -46,11 +46,11 @@ question(" what does the following give us 1:3 + 1:10",
 
 Compare dep_time, sched_dep_time, and dep_delay. 
 
-```{r two-plus-four, exercise=TRUE}
+```{r two-plus-1d, exercise=TRUE}
 
 ```
 
-```{r two-plus-four-solution}
+```{r two-plus-1d-solution}
 flights_deptime <-
   mutate(flights,
     dep_time_min = (dep_time %/% 100 * 60 + dep_time %% 100) %% 1440,
@@ -61,6 +61,6 @@ flights_deptime <-
 filter(flights_deptime, dep_delay_diff != 0)
 ```
 
-```{r two-plus-four-check}
+```{r two-plus-1d-check}
 gradethis::grade_code()
 ```

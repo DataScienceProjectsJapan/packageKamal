@@ -20,19 +20,19 @@ library(tidyverse)
 
 Use any_of () function to find dep_delay and dep_time vectors. 
 
-```{r two-plus-two, exercise=TRUE}
+```{r two-plus-1b, exercise=TRUE}
 
 ```
 
-```{r two-plus-two-hint-1}
+```{r two-plus-1b-hint-1}
 "select(flights, any_of(c()))"
 ```
 
-```{r two-plus-two-solution}
+```{r two-plus-1b-solution}
 select(flights, any_of(c("dep_time", "dep_delay", "arr_time", "arr_delay")))
 ```
 
-```{r two-plus-two-check}
+```{r two-plus-1b-check}
 gradethis::grade_code()
 ```
 
@@ -45,13 +45,13 @@ gradethis::grade_code()
 
 find the vectors dep_time, dep_delay, arr_time, arr_delay without using dep_time, dep_delay, arr_time, arr_delay in the function,, use the starts_with()function.
 
-```{r two-plus-three, exercise=TRUE}
+```{r two-plus-2b, exercise=TRUE}
 
 ```
-```{r two-plus-three-solution}
+```{r two-plus-2b-solution}
 select(flights, starts_with("dep_"), starts_with("arr_"))
 ```
-```{r two-plus-three-check}
+```{r two-plus-2b-check}
 gradethis::grade_code()
 ```
 ## Hard
@@ -60,17 +60,17 @@ gradethis::grade_code()
 
 use the !! operator in a function to find the vectors of "dep_time", "dep_delay", "arr_time", "arr_delay".
 
-```{r two-plus-four, exercise=TRUE}
+```{r two-plus-3b, exercise=TRUE}
 
 ```
-```{r two-plus-four-hint-1}
+```{r two-plus-3b-hint-1}
  "Specify the names of the variables with a character vector and use the bang-bang operator (use c as a name for the variables) (!!)."
 ```
-```{r two-plus-four-solution}
+```{r two-plus-3b-solution}
 variables <- c("dep_time", "dep_delay", "arr_time", "arr_delay")
 select(flights, !!variables)
 ```
-```{r two-plus-four-check}
+```{r two-plus-3b-check}
 gradethis::grade_code()
 ```
 

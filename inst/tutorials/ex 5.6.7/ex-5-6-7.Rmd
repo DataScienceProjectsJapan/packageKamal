@@ -18,7 +18,7 @@ library(tidyverse)
 
 ### question 1
 
-```{r quiz}
+```{r quiz1e}
 question("which delay may prove costlier to customer?",
   answer("arrival delay", correct = TRUE),
   answer("departure delay")
